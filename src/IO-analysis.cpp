@@ -122,19 +122,15 @@ void System::performMeasurement(void)
     m.shrinkingNumber = shrinking_mts.size();
 
     int segmentCount = 0;
-    Microtubule* mt;
 
-    mt = growing_mts.first();
-    while (mt != NULL)
+    for (auto mt = growing_mts.begin(); mt != growing_mts.end(); ++mt)
     {
         segmentCount += mt->segments.size();
-        mt = mt->next();
     }
-    mt = shrinking_mts.first();
-    while (mt != NULL)
+
+    for (auto mt = shrinking_mts.begin(); mt != shrinking_mts.end(); ++mt)
     {
         segmentCount += mt->segments.size();
-        mt = mt->next();
     }
 
     // total number of segments

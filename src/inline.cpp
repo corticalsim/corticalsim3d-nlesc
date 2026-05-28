@@ -1,3 +1,4 @@
+#include <iterator>
 #include <cstddef>
 
 #ifndef NO_INLINE
@@ -294,13 +295,13 @@ inline
 double Microtubule::length()
 {
     double temp = 0.0;
-    Segment* seg = segments.first();
+    // Segment* seg = segments.first();
+    // std::list<SegmentItr> seg{ segments.first() };
 
     // calculate total length of a MT
-    while (seg != NULL)
+    for (auto seg = segments.begin(); seg != segments.end(); ++seg)
     {
         temp += seg->length();
-        seg = seg->next();
     }
     return temp;
 }
@@ -333,8 +334,10 @@ void Microtubule::updateLength(bool forceUpdate)
 #endif
 
     // move the position of the active (first and last) segment end
-    segments.last()->end += plus.event.queue->progression(previousUpdateTag) * plus.dir * plus.velocity;
-    segments.first()->start += minus.event.queue->progression(previousUpdateTag) * minus.dir * minus.velocity;
+    segments.last()->end
+    += plus.event.queue->progression(previousUpdateTag) * static_cast<int>(plus.dir) * plus.velocity;
+    segments.first()->start
+    += minus.event.queue->progression(previousUpdateTag) * static_cast<int>(minus.dir) * minus.velocity;
 
     previousUpdateTag = system->currentTimeTag;
 
