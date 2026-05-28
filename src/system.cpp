@@ -78,17 +78,13 @@ System::System(char* parFile):
         timeQueue.pushGlobal(p.newParameterReadInterval, parameter_change);
         nextParameterEventTime = p.newParameterReadInterval;
     }
-
-    return;
 }
 
 System::~System()
 {
-    // destroy all MTs
+    // Destroy all MTs
     growing_mts.removeAll();
     shrinking_mts.removeAll();
-
-    return;
 }
 
 void System::run(double simTime, string& cS, string& mS)
@@ -783,7 +779,7 @@ void System::handleCatastropheEvent()
     }
     else
     {
-        tipTag = --(geometry->regions[ridx]->growingPlusTipList.end());
+        tipTag = std::prev(geometry->regions[ridx]->growingPlusTipList.end());
         while (tipNumber < geometry->regions[ridx]->growingPlusTipList.size() - 1)
         {
             tipTag--;
@@ -849,7 +845,7 @@ void System::handleRescueEvent()
     }
     else
     {
-        tipTag = --(geometry->regions[ridx]->shrinkingPlusTipList.end());
+        tipTag = geometry->regions[ridx]->shrinkingPlusTipList.back();
         while (tipNumber < geometry->regions[ridx]->shrinkingPlusTipList.size() - 1)
         {
             tipTag--;
@@ -1590,4 +1586,202 @@ void System::makeBinomialTable(void)
         }
     }
     return;
+}
+
+void System::catastrophe(const MTItr& mti)
+{
+#ifdef DBG_MTS
+    cout << "DBG/MTS: System::catastrophe() called.\n";
+#endif
+
+#ifdef DBG_EXTRA_CHECK
+    if (mti->type != mt_growing)
+    {
+        cout << "ERROR: catastrophe called for non-growing MT\n";
+        exit(-1);
+    }
+#endif
+
+    // update MT length
+    mti->updateLength();
+
+    // growing MT will become shrinking MT, hence unregister the tip from growing-plus-tip list of this region
+    mti->plus.trajectory->base.region->unregisterFromRegion(mti->plus.regionTag, t_plus, mt_growing);
+
+    // now, this is shrinking MT
+    mti->type = mt_shrinking;
+
+    // growing MT will become shrinking MT, hence register the tip on shrinking-plus-tip list of this region
+    mti->plus.regionTag = mti->plus.trajectory->base.region->registerOnRegion(&(mti->plus), t_plus, mt_shrinking);
+
+    // replace plus velocity by minus velocity
+    mti->plus.velocity = p.vMin;
+
+    //
+    mti->plus.event.reinitialize(&timeQueue, p.vMin);
+
+    // import the growing MT as shrinking MT
+    shrinking_mts.import(growing_mts, mti);
+
+    if (p.vMin < 0)
+    {
+        // velocity has changed sign, select a new event
+        mti->plus.advanceIntersection();
+    }
+
+    // schedule next event, (if this is triggered by a collision, and vMin > 0, increase occupancy)
+    mti->plus.determineEvent();
+
+    // check possibility of a disappear event
+    mti->setDisappearEvent();
+}
+
+void System::rescue(const MTTip& mti)
+{
+#ifdef DBG_MTS
+    cout << "DBG/MTS: System::rescue() called.\n";
+#endif
+
+#ifdef DBG_EXTRA_CHECK
+    if (mti->type != mt_shrinking)
+    {
+        cout << "ERROR: rescue called for non-shrinking MT\n";
+        exit(-1);
+    }
+#endif
+
+    mti->updateLength();
+
+    // shrinking MT will become growing  MT, hence unregister the tip from shrinking-plus-tip list of this region
+    mti->plus.trajectory->base.region->unregisterFromRegion(mti->plus.regionTag, t_plus, mt_shrinking);
+
+    // now, this is growing MT
+    mti->type = mt_growing;
+
+    // shrinking MT will become growing MT, hence register the tip on growing-plus-tip list of this region
+    mti->plus.regionTag = mti->plus.trajectory->base.region->registerOnRegion(&(mti->plus), t_plus, mt_growing);
+
+    // replace minue velocity by plus velocity
+    mti->plus.velocity = p.vPlus;
+
+    mti->plus.event.reinitialize(&vPlusQueue, p.vPlus);
+
+    // import the shrinking MT as growing MT
+    growing_mts.import(shrinking_mts, mti);
+
+    if (p.vMin < 0)
+    {
+        // velocity has changed sign, need to select a new event
+        mti->plus.advanceIntersection();
+    }
+
+    // schedule next event
+    mti->plus.determineEvent();
+
+    // check possibility of a disappear event
+    mti->setDisappearEvent();
+
+    return;
+}
+
+void System::wall(const MTItr& mti)
+{
+    // only for plus end
+
+    TrajectoryVector tv;
+
+    // set position of the plus end equal to the event position, to mitigate the effect of cumulating addition errors
+    segments.last()->end = plus.nextEventPos;
+    tv = plus.trajectory->nextTrajectory(plus.dir);
+
+    // next trajectory on 'forbidden zone', leads catastrophe
+    if (tv.trajectory->base.region->faceTag == -1)
+    {
+        tv.trajectory->conditionalRemove();
+        catastrophe(mti);
+
+        // no wall crossing
+        return;
+    }
+
+    // edge catastrophe enabled
+    if (p.edgeCatastropheEnabled)
+    {
+        double cosAngle
+        = (mti->plus.dir == ::forward) ? mti->plus.trajectory->nextTrCosAngle : mti->plus.trajectory->prevTrCosAngle;
+
+        // MT is moving non-parallel to the edege
+        if ((1.0 - cosAngle) > ZERO_CUTOFF)
+        {
+            double pCat(0.0);
+
+            // for sharp edged cube
+            if (p.geometry == "cubeReal")
+            {
+                if (abs(mti->plus.trajectory->base.region->faceTag - tv.trajectory->base.region->faceTag) > 0)
+                {
+                    if (abs(mti->plus.trajectory->base.region->faceTag - tv.trajectory->base.region->faceTag) > 1)
+                    {
+                        pCat = p.pCatSpecialEdgeMax;
+                    }
+
+                    else
+                    {
+                        pCat = p.pCatRegularEdgeMax;
+                    }
+                }
+            }
+
+            // other
+            else
+            {
+                pCat
+                = (mti->plus.dir == ::forward) ? mti->plus.trajectory->nextTrpCat : mti->plus.trajectory->prevTrpCat;
+            }
+
+            // when smooth catastrophe is enabled
+            if (p.edgeCatastropheSmooth)
+            {
+                pCat *= (1.0 - cosAngle);
+            }
+
+            // apply catastrophe
+            if (randomGen.rand() <= pCat)
+            {
+                tv.trajectory->conditionalRemove();
+                catastrophe();
+
+                // no wall crossing
+                return;
+            }
+        }
+    }
+
+    // update boundarty crossing count
+    boundaryCrossingCount++;
+
+#ifdef DBG_ASSERT
+    if (mti->segments.last()->endItr != plus.nextCollision)
+    {
+        cerr << "DBG/ASSERT: nextCollision does not match with endItr upon entering wall event.\n";
+    }
+#endif
+
+    // wall crossing
+    mti->segments.last()->endItr = mti->plus.nextCollision;
+
+    // create a new segment
+    mti->segments.create(*mti, tv);
+    mti->segments.last()->startItr = tv.dir == ::forward ? tv.trajectory->wallBegin() : tv.trajectory->wallEnd();
+
+    // switch trajectory
+    mti->plus.switchTrajectory(
+    tv.trajectory, tv.dir, tv.dir == ::forward ? tv.trajectory->wallBegin() : tv.trajectory->wallEnd());
+
+    if (mti->segments.size() == 2)
+    {
+        // MT with two segment of zero (=0) length, consider possibilty of a disappear event
+        mti->minus.determineEvent();
+        mti->setDisappearEvent();
+    }
 }
