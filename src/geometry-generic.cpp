@@ -400,6 +400,31 @@ void Region::unregisterFromRegion(RegionMTTipTag tag, TipType tiptype, MTType mt
     return;
 }
 
+Trajectory::Trajectory():
+    base({}),
+    length(0.0),
+    prevTr(0, ::forward, NULL),
+    nextTr(0, ::forward, NULL),
+    prevTrCosAngle(1.0),
+    nextTrCosAngle(1.0)
+{
+#ifdef DBG_GEOMETRY
+    cout << "DBG/GEOMETRY: Trajectory created\n";
+#endif
+
+    // assign end points of the trajectory
+    for (int i = 0; i < 2; i++)
+    {
+        endPoint.push_back(endP[i]);
+    }
+
+    // increase total number of trajectories in the geometry
+    base.region->geometry->system->countTrajectories++;
+
+    // initialize the intersection list of the trajectory
+    intersections.insert(pair<double, Intersection>(-1.0, Intersection()));
+}
+
 Trajectory::Trajectory(SurfaceVector baseVec, vector<PointATedge> endP, double l):
     base(baseVec),
     length(l),
@@ -423,15 +448,12 @@ Trajectory::Trajectory(SurfaceVector baseVec, vector<PointATedge> endP, double l
 
     // initialize the intersection list of the trajectory
     intersections.insert(pair<double, Intersection>(-1.0, Intersection()));
-
-    return;
 }
 
 Trajectory::~Trajectory()
 {
     // decrease total number of trajectories in the geometry
     base.region->geometry->system->countTrajectories--;
-    return;
 }
 
 bool Trajectory::integrityCheck()
