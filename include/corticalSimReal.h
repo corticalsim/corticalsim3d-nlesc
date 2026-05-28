@@ -42,9 +42,6 @@
 #include <list>
 #include <map>
 #include <queue>
-#include <boost/pool/pool_alloc.hpp>
-#include <boost/lexical_cast.hpp>
-#include <boost/filesystem.hpp>
 #include <string>
 #include <cstring>
 #include <cmath>
@@ -192,10 +189,9 @@ class Intersection;
 class OccupiedIntersection;
 #endif
 
-typedef multimap<double,
-                 Intersection,
-                 std::less<double>,
-                 boost::fast_pool_allocator<std::pair<double, Intersection>>>::iterator IntersectionItr;
+using IntersectionItr = multimap<double, Intersection>::iterator;
+using SegmentItr = DLIter<Segment>;
+using MTItr = DLIter<Microtubule>;
 typedef int EventDescriptorIndex;
 typedef int EventTrackingTag;
 typedef list<Segment*>::iterator TrjSegmentTag;
@@ -389,7 +385,7 @@ class PointATedge
     }
 };
 
-class Trajectory: public DLBaseItem<Trajectory>
+class Trajectory
 // the trajectory is the basic geometrical object. Tips and segments associate
 // with a trajectory and move/lie alongside it. Trajectory intersections
 // determine the collision points
@@ -423,8 +419,7 @@ class Trajectory: public DLBaseItem<Trajectory>
     // regular catastrophe value at the trajectory far end
     double nextTrpCat;
 
-    multimap<double, Intersection, std::less<double>, boost::fast_pool_allocator<std::pair<double, Intersection>>>
-    intersections;
+    multimap<double, IntersectionItr> intersections;
 
     // sorted list of all intersections
     IntersectionItr wallEnd()
@@ -440,6 +435,7 @@ class Trajectory: public DLBaseItem<Trajectory>
         return intersections.begin();
     }
 
+    Trajectory();
     explicit Trajectory(SurfaceVector, vector<PointATedge>, double);
     ~Trajectory();
 
@@ -453,10 +449,10 @@ class Trajectory: public DLBaseItem<Trajectory>
     void conditionalRemove();
 
     // list of pointers to associated segments
-    list<Segment*> segments;
+    list<SegmentItr> segments;
 
     // inserts a segment into the list
-    TrjSegmentTag insertSegment(Segment*);
+    TrjSegmentTag insertSegment(SegmentItr);
 
     // removes a segment from the list
     void removeSegment(TrjSegmentTag);
@@ -878,7 +874,7 @@ class MTTip
     MTTip& operator=(const MTTip&);
 };
 
-class Segment: public DLBaseItem<Segment>
+class Segment
 {
   public:
 
@@ -896,6 +892,7 @@ class Segment: public DLBaseItem<Segment>
 
     // constructs a segment as part of a microtubule at a specified vector
     // location
+    Segment();
     Segment(Microtubule*, TrajectoryVector&);
 
     ~Segment();
@@ -907,7 +904,7 @@ class Segment: public DLBaseItem<Segment>
     bool crossesIntersection(IntersectionItr& is);
 };
 
-class Microtubule: public DLBaseItem<Microtubule>
+class Microtubule
 {
   public:
 
@@ -1208,6 +1205,11 @@ class System
     void performMeasurement();
     void writeMeasurementsToFile(int = 0);
     void closeFiles();
+
+    // Methods ported from the Microtubule class
+    void catastrophe(const MTTip&);
+    void rescue(const MTTip&);
+    void wall(const MTTip&);
 
 #ifdef CROSS_SEV
     // removes pointers from is and its mirror
