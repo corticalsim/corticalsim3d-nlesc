@@ -44,7 +44,8 @@ void deleteFirst(struct edgeRecord** head)
         return;
     }
     *head = tmp->next;
-    free(tmp);
+    delete tmp;
+    tmp = NULL;
 }
 
 // display edge record
@@ -728,7 +729,7 @@ void makeGraph(int Gvertex, vector<elementList*>& eList, vector<Triangle3D*>& el
     void edge_sort(edgeRecord**, int);
     void find_connectivity(edgeRecord**, vector<elementList*>&);
 
-    struct edgeRecord* EdgList = new edgeRecord;
+    struct edgeRecord* EdgList = new edgeRecord();
 
     vector<int> v;
     v.push_back(0);

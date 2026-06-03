@@ -51,7 +51,7 @@
 #include <iomanip>
 #include <fstream>
 #include <Eigen/Dense>
-#include "MersenneTwister.h"
+#include "randhub.hpp"
 #include "eig3.h"
 #include "DLList.h"
 #include <float.h>
@@ -192,10 +192,7 @@ class Intersection;
 class OccupiedIntersection;
 #endif
 
-typedef multimap<double,
-                 Intersection,
-                 std::less<double>,
-                 boost::fast_pool_allocator<std::pair<double, Intersection>>>::iterator IntersectionItr;
+typedef multimap<double, Intersection>::iterator IntersectionItr;
 typedef int EventDescriptorIndex;
 typedef int EventTrackingTag;
 typedef list<Segment*>::iterator TrjSegmentTag;
@@ -423,8 +420,7 @@ class Trajectory: public DLBaseItem<Trajectory>
     // regular catastrophe value at the trajectory far end
     double nextTrpCat;
 
-    multimap<double, Intersection, std::less<double>, boost::fast_pool_allocator<std::pair<double, Intersection>>>
-    intersections;
+    multimap<double, Intersection> intersections;
 
     // sorted list of all intersections
     IntersectionItr wallEnd()
@@ -1085,7 +1081,7 @@ class System
     Parameters p;
 
     // random generator
-    MTRand randomGen;
+    RandHub<> randomGen;
 
     // current system time with respect to offset
     double systemTime;
