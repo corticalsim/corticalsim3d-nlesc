@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structbendingOperator" kind="struct" language="C++" prot="public">
+    <compoundname>bendingOperator</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbendingOperator_1af2f1b1ec79ab906070ffe2d6f493cf60" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double bendingOperator::cosTheta</definition>
+        <argsstring></argsstring>
+        <name>cosTheta</name>
+        <qualifiedname>bendingOperator::cosTheta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="501" column="12" bodyfile="include/corticalSimReal.h" bodystart="501" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbendingOperator_1a9250a648ea67ba58f16749f467e650ed" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double bendingOperator::sinTheta</definition>
+        <argsstring></argsstring>
+        <name>sinTheta</name>
+        <qualifiedname>bendingOperator::sinTheta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="502" column="12" bodyfile="include/corticalSimReal.h" bodystart="502" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbendingOperator_1a1e454fce67a83627374e29a7f88c72af" prot="public" static="no" mutable="no">
+        <type>Vector3d</type>
+        <definition>Vector3d bendingOperator::axis</definition>
+        <argsstring></argsstring>
+        <name>axis</name>
+        <qualifiedname>bendingOperator::axis</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="504" column="14" bodyfile="include/corticalSimReal.h" bodystart="504" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structbendingOperator_1a3b2a49b45ab641b347640cb401721aec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>bendingOperator::bendingOperator</definition>
+        <argsstring>()</argsstring>
+        <name>bendingOperator</name>
+        <qualifiedname>bendingOperator::bendingOperator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="506" column="5" bodyfile="include/corticalSimReal.h" bodystart="506" bodyend="512"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/corticalSimReal.h" line="497" column="1" bodyfile="include/corticalSimReal.h" bodystart="498" bodyend="513"/>
+    <listofallmembers>
+      <member refid="structbendingOperator_1a1e454fce67a83627374e29a7f88c72af" prot="public" virt="non-virtual"><scope>bendingOperator</scope><name>axis</name></member>
+      <member refid="structbendingOperator_1a3b2a49b45ab641b347640cb401721aec" prot="public" virt="non-virtual"><scope>bendingOperator</scope><name>bendingOperator</name></member>
+      <member refid="structbendingOperator_1af2f1b1ec79ab906070ffe2d6f493cf60" prot="public" virt="non-virtual"><scope>bendingOperator</scope><name>cosTheta</name></member>
+      <member refid="structbendingOperator_1a9250a648ea67ba58f16749f467e650ed" prot="public" virt="non-virtual"><scope>bendingOperator</scope><name>sinTheta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

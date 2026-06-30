@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="CompactList_8h">CompactList.h</innerfile>
+    <innerfile refid="corticalSimReal_8h">corticalSimReal.h</innerfile>
+    <innerfile refid="DLList_8h">DLList.h</innerfile>
+    <innerfile refid="eig3_8h">eig3.h</innerfile>
+    <innerfile refid="MersenneTwister_8h">MersenneTwister.h</innerfile>
+    <innerfile refid="meshImport_8h">meshImport.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/"/>
+  </compounddef>
+</doxygen>

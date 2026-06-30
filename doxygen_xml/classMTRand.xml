@@ -1,0 +1,705 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classMTRand" kind="class" language="C++" prot="public">
+    <compoundname>MTRand</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classMTRand_1a10c3437be98225f5b0beee1ed8c033c8" prot="public" static="no" strong="no">
+        <type></type>
+        <name></name>
+        <qualifiedname>MTRand</qualifiedname>
+        <enumvalue id="classMTRand_1a10c3437be98225f5b0beee1ed8c033c8a60f472facea8fabd42765cd91273db7b" prot="public">
+          <name>N</name>
+          <initializer>= 624</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="77" column="5" bodyfile="include/MersenneTwister.h" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="enum" id="classMTRand_1a60fd88469207f761aef84c3fc57c04a3" prot="public" static="no" strong="no">
+        <type></type>
+        <name></name>
+        <qualifiedname>MTRand</qualifiedname>
+        <enumvalue id="classMTRand_1a60fd88469207f761aef84c3fc57c04a3a3899803ea0d4da3018d311ed4902d9cc" prot="public">
+          <name>SAVE</name>
+          <initializer>= N + 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="82" column="5" bodyfile="include/MersenneTwister.h" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classMTRand_1a45478edf9e24dcd2a5164bac3889d6a2" prot="public" static="no">
+        <type>unsigned long</type>
+        <definition>typedef unsigned long MTRand::uint32</definition>
+        <argsstring></argsstring>
+        <name>uint32</name>
+        <qualifiedname>MTRand::uint32</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="75" column="27" bodyfile="include/MersenneTwister.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="classMTRand_1af85a644e008b8a693b0d9867bce455bd" prot="protected" static="no" strong="no">
+        <type></type>
+        <name></name>
+        <qualifiedname>MTRand</qualifiedname>
+        <enumvalue id="classMTRand_1af85a644e008b8a693b0d9867bce455bda133070000b798889cd75535ea0d5bb71" prot="protected">
+          <name>M</name>
+          <initializer>= 397</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="89" column="5" bodyfile="include/MersenneTwister.h" bodystart="90" bodyend="92"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classMTRand_1a2c87f537429bf0b0f6a452c22b9eebba" prot="protected" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 MTRand::state[N]</definition>
+        <argsstring>[N]</argsstring>
+        <name>state</name>
+        <qualifiedname>MTRand::state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="94" column="12" bodyfile="include/MersenneTwister.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMTRand_1a2b80858137c88fe69d4d2bdc665bcf93" prot="protected" static="no" mutable="no">
+        <type>uint32 *</type>
+        <definition>uint32* MTRand::pNext</definition>
+        <argsstring></argsstring>
+        <name>pNext</name>
+        <qualifiedname>MTRand::pNext</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="95" column="12" bodyfile="include/MersenneTwister.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMTRand_1a98eabf568c88f121e44f487397f32495" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MTRand::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <qualifiedname>MTRand::left</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="96" column="9" bodyfile="include/MersenneTwister.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMTRand_1ab4f392e44228a583b7b1a3f036fb2fd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MTRand::MTRand</definition>
+        <argsstring>(const uint32 &amp;oneSeed)</argsstring>
+        <name>MTRand</name>
+        <qualifiedname>MTRand::MTRand</qualifiedname>
+        <param>
+          <type>const uint32 &amp;</type>
+          <declname>oneSeed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="102" column="5" bodyfile="include/MersenneTwister.h" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a380e79e0192b46426abcefa6e2dd082e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MTRand::MTRand</definition>
+        <argsstring>(uint32 *const bigSeed, uint32 const seedLength=N)</argsstring>
+        <name>MTRand</name>
+        <qualifiedname>MTRand::MTRand</qualifiedname>
+        <param>
+          <type>uint32 *const</type>
+          <declname>bigSeed</declname>
+        </param>
+        <param>
+          <type>uint32 const</type>
+          <declname>seedLength</declname>
+          <defval>N</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="103" column="5" bodyfile="include/MersenneTwister.h" bodystart="165" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a265dc65546e26073c0d5f8787b045a1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MTRand::MTRand</definition>
+        <argsstring>()</argsstring>
+        <name>MTRand</name>
+        <qualifiedname>MTRand::MTRand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="104" column="5" bodyfile="include/MersenneTwister.h" bodystart="167" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a76d129a2d850c24ff4a0613f299cf3a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MTRand::rand</definition>
+        <argsstring>()</argsstring>
+        <name>rand</name>
+        <qualifiedname>MTRand::rand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="111" column="12" bodyfile="include/MersenneTwister.h" bodystart="169" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a7a47382fb7b19ae1f330691735dc800b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MTRand::rand</definition>
+        <argsstring>(const double &amp;n)</argsstring>
+        <name>rand</name>
+        <qualifiedname>MTRand::rand</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="112" column="12" bodyfile="include/MersenneTwister.h" bodystart="171" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1afd05e468983b3a3d66ce0f403bd666af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MTRand::randExc</definition>
+        <argsstring>()</argsstring>
+        <name>randExc</name>
+        <qualifiedname>MTRand::randExc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="113" column="12" bodyfile="include/MersenneTwister.h" bodystart="173" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a2955abdb96e6cab97e50ac755d48dad1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MTRand::randExc</definition>
+        <argsstring>(const double &amp;n)</argsstring>
+        <name>randExc</name>
+        <qualifiedname>MTRand::randExc</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="114" column="12" bodyfile="include/MersenneTwister.h" bodystart="175" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a4d3a475aa72fe6d1a6d7d9e16d6a732e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MTRand::randDblExc</definition>
+        <argsstring>()</argsstring>
+        <name>randDblExc</name>
+        <qualifiedname>MTRand::randDblExc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="115" column="12" bodyfile="include/MersenneTwister.h" bodystart="177" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a587c90f52c35fa2bf05d34791dd5457e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MTRand::randDblExc</definition>
+        <argsstring>(const double &amp;n)</argsstring>
+        <name>randDblExc</name>
+        <qualifiedname>MTRand::randDblExc</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="116" column="12" bodyfile="include/MersenneTwister.h" bodystart="179" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1ad1008efd4fe0e8aae30459c2c58cfe35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32</type>
+        <definition>MTRand::uint32 MTRand::randInt</definition>
+        <argsstring>()</argsstring>
+        <name>randInt</name>
+        <qualifiedname>MTRand::randInt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="117" column="12" bodyfile="include/MersenneTwister.h" bodystart="196" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a18ea21f615df06c9359c34d2eba6f252" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32</type>
+        <definition>MTRand::uint32 MTRand::randInt</definition>
+        <argsstring>(const uint32 &amp;n)</argsstring>
+        <name>randInt</name>
+        <qualifiedname>MTRand::randInt</qualifiedname>
+        <param>
+          <type>const uint32 &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="118" column="12" bodyfile="include/MersenneTwister.h" bodystart="215" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1abbb87a08d622d58fdee0eea4cb5471a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MTRand::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <qualifiedname>MTRand::operator()</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="120" column="12" bodyfile="include/MersenneTwister.h" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a15f4daf79febbe4ff43c3e6ce2c4fcbe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MTRand::rand53</definition>
+        <argsstring>()</argsstring>
+        <name>rand53</name>
+        <qualifiedname>MTRand::rand53</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="126" column="12" bodyfile="include/MersenneTwister.h" bodystart="181" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1af759d1f30d4f29a715e6f6e86850b5c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MTRand::randNorm</definition>
+        <argsstring>(const double &amp;mean=0.0, const double &amp;variance=0.0)</argsstring>
+        <name>randNorm</name>
+        <qualifiedname>MTRand::randNorm</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>mean</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>variance</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="129" column="12" bodyfile="include/MersenneTwister.h" bodystart="187" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a1e21a79e0a30225fffe924229e34a923" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MTRand::seed</definition>
+        <argsstring>(const uint32 oneSeed)</argsstring>
+        <name>seed</name>
+        <qualifiedname>MTRand::seed</qualifiedname>
+        <param>
+          <type>const uint32</type>
+          <declname>oneSeed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="132" column="10" bodyfile="include/MersenneTwister.h" bodystart="235" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a5758103776b131e8ea46b6dc1b9fb267" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MTRand::seed</definition>
+        <argsstring>(uint32 *const bigSeed, const uint32 seedLength=N)</argsstring>
+        <name>seed</name>
+        <qualifiedname>MTRand::seed</qualifiedname>
+        <param>
+          <type>uint32 *const</type>
+          <declname>bigSeed</declname>
+        </param>
+        <param>
+          <type>const uint32</type>
+          <declname>seedLength</declname>
+          <defval>N</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="133" column="10" bodyfile="include/MersenneTwister.h" bodystart="242" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1ad88ea3363d55bafb62826bbd130279c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MTRand::seed</definition>
+        <argsstring>()</argsstring>
+        <name>seed</name>
+        <qualifiedname>MTRand::seed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="134" column="10" bodyfile="include/MersenneTwister.h" bodystart="287" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1aabe5ec2cad71c1c67d9390a4a235edad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MTRand::save</definition>
+        <argsstring>(uint32 *saveArray) const</argsstring>
+        <name>save</name>
+        <qualifiedname>MTRand::save</qualifiedname>
+        <param>
+          <type>uint32 *</type>
+          <declname>saveArray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="137" column="10" bodyfile="include/MersenneTwister.h" bodystart="377" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a8302e9a8cd16d8dfc536a85bf2f68be0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MTRand::load</definition>
+        <argsstring>(uint32 *const loadArray)</argsstring>
+        <name>load</name>
+        <qualifiedname>MTRand::load</qualifiedname>
+        <param>
+          <type>uint32 *const</type>
+          <declname>loadArray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="138" column="10" bodyfile="include/MersenneTwister.h" bodystart="388" bodyend="398"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classMTRand_1a5ca1e3e4ee3ab9001d0407a81437c58b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const MTRand &amp;mtrand)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>MTRand::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classMTRand" kindref="compound">MTRand</ref> &amp;</type>
+          <declname>mtrand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="139" column="12" bodyfile="include/MersenneTwister.h" bodystart="400" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="friend" id="classMTRand_1ac931e35e0d686b97d83edb8b249ec52a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::istream &amp;</type>
+        <definition>std::istream &amp; operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;is, MTRand &amp;mtrand)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <qualifiedname>MTRand::operator&gt;&gt;</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <param>
+          <type><ref refid="classMTRand" kindref="compound">MTRand</ref> &amp;</type>
+          <declname>mtrand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="140" column="25" bodyfile="include/MersenneTwister.h" bodystart="410" bodyend="420"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classMTRand_1a9b9a20998f5c805af6301ce5c37dcfc3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MTRand::initialize</definition>
+        <argsstring>(const uint32 oneSeed)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>MTRand::initialize</qualifiedname>
+        <param>
+          <type>const uint32</type>
+          <declname>oneSeed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="144" column="10" bodyfile="include/MersenneTwister.h" bodystart="316" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a1d5fcb69d83f4d2fd653883c8352f86c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MTRand::reload</definition>
+        <argsstring>()</argsstring>
+        <name>reload</name>
+        <qualifiedname>MTRand::reload</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="145" column="10" bodyfile="include/MersenneTwister.h" bodystart="333" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a900c4700226add7e7eb0c2efd9f24ced" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32</type>
+        <definition>uint32 MTRand::hiBit</definition>
+        <argsstring>(const uint32 &amp;u) const</argsstring>
+        <name>hiBit</name>
+        <qualifiedname>MTRand::hiBit</qualifiedname>
+        <param>
+          <type>const uint32 &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="147" column="12" bodyfile="include/MersenneTwister.h" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a6e2f7d8bae68dc63f6bcbb954cf4fb29" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32</type>
+        <definition>uint32 MTRand::loBit</definition>
+        <argsstring>(const uint32 &amp;u) const</argsstring>
+        <name>loBit</name>
+        <qualifiedname>MTRand::loBit</qualifiedname>
+        <param>
+          <type>const uint32 &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="149" column="12" bodyfile="include/MersenneTwister.h" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a1930fa7c242d35be28bb99b18a84a93d" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32</type>
+        <definition>uint32 MTRand::loBits</definition>
+        <argsstring>(const uint32 &amp;u) const</argsstring>
+        <name>loBits</name>
+        <qualifiedname>MTRand::loBits</qualifiedname>
+        <param>
+          <type>const uint32 &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="151" column="12" bodyfile="include/MersenneTwister.h" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1a41b6713f75a771c5ec8e71ef6832a5fa" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32</type>
+        <definition>uint32 MTRand::mixBits</definition>
+        <argsstring>(const uint32 &amp;u, const uint32 &amp;v) const</argsstring>
+        <name>mixBits</name>
+        <qualifiedname>MTRand::mixBits</qualifiedname>
+        <param>
+          <type>const uint32 &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const uint32 &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="153" column="12" bodyfile="include/MersenneTwister.h" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classMTRand_1adf604988eb6155df3143d9207f02f61a" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32</type>
+        <definition>uint32 MTRand::twist</definition>
+        <argsstring>(const uint32 &amp;m, const uint32 &amp;s0, const uint32 &amp;s1) const</argsstring>
+        <name>twist</name>
+        <qualifiedname>MTRand::twist</qualifiedname>
+        <param>
+          <type>const uint32 &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const uint32 &amp;</type>
+          <declname>s0</declname>
+        </param>
+        <param>
+          <type>const uint32 &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="155" column="12" bodyfile="include/MersenneTwister.h" bodystart="155" bodyend="158"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classMTRand_1a486885d03f38c844315d002e6312fa23" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32</type>
+        <definition>MTRand::uint32 MTRand::hash</definition>
+        <argsstring>(time_t t, clock_t c)</argsstring>
+        <name>hash</name>
+        <qualifiedname>MTRand::hash</qualifiedname>
+        <param>
+          <type>time_t</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>clock_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MersenneTwister.h" line="160" column="19" bodyfile="include/MersenneTwister.h" bodystart="352" bodyend="375"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/MersenneTwister.h" line="69" column="1" bodyfile="include/MersenneTwister.h" bodystart="70" bodyend="161"/>
+    <listofallmembers>
+      <member refid="classMTRand_1a486885d03f38c844315d002e6312fa23" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>hash</name></member>
+      <member refid="classMTRand_1a900c4700226add7e7eb0c2efd9f24ced" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>hiBit</name></member>
+      <member refid="classMTRand_1a9b9a20998f5c805af6301ce5c37dcfc3" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>initialize</name></member>
+      <member refid="classMTRand_1a98eabf568c88f121e44f487397f32495" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>left</name></member>
+      <member refid="classMTRand_1a8302e9a8cd16d8dfc536a85bf2f68be0" prot="public" virt="non-virtual"><scope>MTRand</scope><name>load</name></member>
+      <member refid="classMTRand_1a6e2f7d8bae68dc63f6bcbb954cf4fb29" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>loBit</name></member>
+      <member refid="classMTRand_1a1930fa7c242d35be28bb99b18a84a93d" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>loBits</name></member>
+      <member refid="classMTRand_1af85a644e008b8a693b0d9867bce455bda133070000b798889cd75535ea0d5bb71" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>M</name></member>
+      <member refid="classMTRand_1a41b6713f75a771c5ec8e71ef6832a5fa" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>mixBits</name></member>
+      <member refid="classMTRand_1ab4f392e44228a583b7b1a3f036fb2fd0" prot="public" virt="non-virtual"><scope>MTRand</scope><name>MTRand</name></member>
+      <member refid="classMTRand_1a380e79e0192b46426abcefa6e2dd082e" prot="public" virt="non-virtual"><scope>MTRand</scope><name>MTRand</name></member>
+      <member refid="classMTRand_1a265dc65546e26073c0d5f8787b045a1d" prot="public" virt="non-virtual"><scope>MTRand</scope><name>MTRand</name></member>
+      <member refid="classMTRand_1a10c3437be98225f5b0beee1ed8c033c8a60f472facea8fabd42765cd91273db7b" prot="public" virt="non-virtual"><scope>MTRand</scope><name>N</name></member>
+      <member refid="classMTRand_1abbb87a08d622d58fdee0eea4cb5471a0" prot="public" virt="non-virtual"><scope>MTRand</scope><name>operator()</name></member>
+      <member refid="classMTRand_1a5ca1e3e4ee3ab9001d0407a81437c58b" prot="public" virt="non-virtual"><scope>MTRand</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classMTRand_1ac931e35e0d686b97d83edb8b249ec52a" prot="public" virt="non-virtual"><scope>MTRand</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classMTRand_1a2b80858137c88fe69d4d2bdc665bcf93" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>pNext</name></member>
+      <member refid="classMTRand_1a76d129a2d850c24ff4a0613f299cf3a5" prot="public" virt="non-virtual"><scope>MTRand</scope><name>rand</name></member>
+      <member refid="classMTRand_1a7a47382fb7b19ae1f330691735dc800b" prot="public" virt="non-virtual"><scope>MTRand</scope><name>rand</name></member>
+      <member refid="classMTRand_1a15f4daf79febbe4ff43c3e6ce2c4fcbe" prot="public" virt="non-virtual"><scope>MTRand</scope><name>rand53</name></member>
+      <member refid="classMTRand_1a4d3a475aa72fe6d1a6d7d9e16d6a732e" prot="public" virt="non-virtual"><scope>MTRand</scope><name>randDblExc</name></member>
+      <member refid="classMTRand_1a587c90f52c35fa2bf05d34791dd5457e" prot="public" virt="non-virtual"><scope>MTRand</scope><name>randDblExc</name></member>
+      <member refid="classMTRand_1afd05e468983b3a3d66ce0f403bd666af" prot="public" virt="non-virtual"><scope>MTRand</scope><name>randExc</name></member>
+      <member refid="classMTRand_1a2955abdb96e6cab97e50ac755d48dad1" prot="public" virt="non-virtual"><scope>MTRand</scope><name>randExc</name></member>
+      <member refid="classMTRand_1ad1008efd4fe0e8aae30459c2c58cfe35" prot="public" virt="non-virtual"><scope>MTRand</scope><name>randInt</name></member>
+      <member refid="classMTRand_1a18ea21f615df06c9359c34d2eba6f252" prot="public" virt="non-virtual"><scope>MTRand</scope><name>randInt</name></member>
+      <member refid="classMTRand_1af759d1f30d4f29a715e6f6e86850b5c4" prot="public" virt="non-virtual"><scope>MTRand</scope><name>randNorm</name></member>
+      <member refid="classMTRand_1a1d5fcb69d83f4d2fd653883c8352f86c" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>reload</name></member>
+      <member refid="classMTRand_1aabe5ec2cad71c1c67d9390a4a235edad" prot="public" virt="non-virtual"><scope>MTRand</scope><name>save</name></member>
+      <member refid="classMTRand_1a60fd88469207f761aef84c3fc57c04a3a3899803ea0d4da3018d311ed4902d9cc" prot="public" virt="non-virtual"><scope>MTRand</scope><name>SAVE</name></member>
+      <member refid="classMTRand_1a1e21a79e0a30225fffe924229e34a923" prot="public" virt="non-virtual"><scope>MTRand</scope><name>seed</name></member>
+      <member refid="classMTRand_1a5758103776b131e8ea46b6dc1b9fb267" prot="public" virt="non-virtual"><scope>MTRand</scope><name>seed</name></member>
+      <member refid="classMTRand_1ad88ea3363d55bafb62826bbd130279c2" prot="public" virt="non-virtual"><scope>MTRand</scope><name>seed</name></member>
+      <member refid="classMTRand_1a2c87f537429bf0b0f6a452c22b9eebba" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>state</name></member>
+      <member refid="classMTRand_1adf604988eb6155df3143d9207f02f61a" prot="protected" virt="non-virtual"><scope>MTRand</scope><name>twist</name></member>
+      <member refid="classMTRand_1a45478edf9e24dcd2a5164bac3889d6a2" prot="public" virt="non-virtual"><scope>MTRand</scope><name>uint32</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

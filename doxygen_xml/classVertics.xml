@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classVertics" kind="class" language="C++" prot="public">
+    <compoundname>Vertics</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classVertics_1aee7a3f8c0000285eb80594efbc72a345" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Vertics::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>Vertics::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="209" column="12" bodyfile="include/corticalSimReal.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classVertics_1acd23c8bb79c6a79e596eb89683728e3d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Vertics::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>Vertics::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="210" column="12" bodyfile="include/corticalSimReal.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classVertics_1adfab50ad38ae8689c5939e2d5abc2738" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Vertics::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>Vertics::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="211" column="12" bodyfile="include/corticalSimReal.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classVertics_1a4bcbbd3c5cf063d2aa1eeae6820c3389" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Vertics::Vertics</definition>
+        <argsstring>(double x1, double y1, double z1)</argsstring>
+        <name>Vertics</name>
+        <qualifiedname>Vertics::Vertics</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="213" column="5" bodyfile="include/corticalSimReal.h" bodystart="213" bodyend="218"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/corticalSimReal.h" line="205" column="1" bodyfile="include/corticalSimReal.h" bodystart="206" bodyend="219"/>
+    <listofallmembers>
+      <member refid="classVertics_1a4bcbbd3c5cf063d2aa1eeae6820c3389" prot="public" virt="non-virtual"><scope>Vertics</scope><name>Vertics</name></member>
+      <member refid="classVertics_1aee7a3f8c0000285eb80594efbc72a345" prot="public" virt="non-virtual"><scope>Vertics</scope><name>x</name></member>
+      <member refid="classVertics_1acd23c8bb79c6a79e596eb89683728e3d" prot="public" virt="non-virtual"><scope>Vertics</scope><name>y</name></member>
+      <member refid="classVertics_1adfab50ad38ae8689c5939e2d5abc2738" prot="public" virt="non-virtual"><scope>Vertics</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

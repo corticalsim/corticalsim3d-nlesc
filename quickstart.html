@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Start &mdash; CorticalSim3D  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Development" href="development.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CorticalSim3D
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#corticalsim3d-cortical-microtubule-dynamics">corticalsim3D (cortical microtubule dynamics)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#note">Note</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-dependencies">Install the dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux">Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#compile">Compile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run">Run</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technical.html">Technical documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CorticalSim3D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Quick Start</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quick-start">
+<h1>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h1>
+<section id="corticalsim3d-cortical-microtubule-dynamics">
+<h2>corticalsim3D (cortical microtubule dynamics)<a class="headerlink" href="#corticalsim3d-cortical-microtubule-dynamics" title="Link to this heading"></a></h2>
+<p><img alt="alt text" src="doc/assets/logo/logomodelCMT-1.0.png" /></p>
+<p>This is a program for simulating cortical microtubule dynamics (CMT) on experimentally extracted microscopic images of cells</p>
+<p>Application:</p>
+<p>https://www.sciencedirect.com/science/article/pii/S0960982218309242</p>
+<p>https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005959</p>
+<section id="note">
+<h3>Note<a class="headerlink" href="#note" title="Link to this heading"></a></h3>
+<p>Testing and contributing is very welcome, especially if you can contribute with new algorithms and features.</p>
+</section>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>NOTE: You need a compiler that supports the C++ 14 standard as a minimum.</p>
+<section id="install-the-dependencies">
+<h3>Install the dependencies<a class="headerlink" href="#install-the-dependencies" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">corticalsim3D</span></code> depends on Eigen and Boost (however, the latter will be dropped soon). In addition, you will need <a class="reference external" href="https://mesonbuild.com/index.html">Meson</a> to build the executables, as well as a fairly recent C++ compiler (GCC or Clang) supporting the C++ 14 standard. The following instructions outline the process of installing the dependencies on different platforms, as well as compiling and installing the <code class="docutils literal notranslate"><span class="pre">corticalsim3D</span></code> package itself.</p>
+<section id="windows">
+<h4>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h4>
+<p>Most dependencies need to be installed manually on Windows.</p>
+<ol class="arabic">
+<li><p>GCC</p>
+<ol class="arabic simple">
+<li><p>Download <a class="reference external" href="https://www.mingw-w64.org/">MinGW</a></p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">mingw-xx.exe</span></code> (this will create a folder called <code class="docutils literal notranslate"><span class="pre">MinGw</span></code>)</p></li>
+<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">MinGw</span></code> folder to <code class="docutils literal notranslate"><span class="pre">C:\</span></code></p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">C:\MinGW</span></code> and <code class="docutils literal notranslate"><span class="pre">C:\MinGW\bin</span></code> to the system path</p></li>
+</ol>
+</li>
+<li><p>Eigen</p>
+<ol class="arabic simple">
+<li><p>Download <a class="reference external" href="https://libeigen.gitlab.io/">Eigen</a></p></li>
+<li><p>Extract <code class="docutils literal notranslate"><span class="pre">eigen-3.4.0</span></code> folder and rename it to <code class="docutils literal notranslate"><span class="pre">Eigen</span></code></p></li>
+<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">Eigen</span></code> folder to <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span></code></p></li>
+</ol>
+</li>
+<li><p>Boost</p>
+<p>Download and install <a class="reference external" href="https://www.boost.org/releases/latest/">Boost</a>.</p>
+<p><span style="color: red;">NOTE</span>: The Boost dependency will be deprecated and removed soon.</p>
+</li>
+<li><p>Meson</p>
+<p>Use the official <a class="reference external" href="https://github.com/mesonbuild/meson/releases">Meson installer for Windows</a>. The installer also bundles the Ninja dependency, so you don’t have to install that separately.</p>
+</li>
+</ol>
+</section>
+<section id="linux">
+<h4>Linux<a class="headerlink" href="#linux" title="Link to this heading"></a></h4>
+<p>Please use your package manager to install all the dependencies. Most Linux distributions provide packages for GCC, Meson, Ninja, Boost and Eigen.</p>
+<p>Instructions for Ubuntu (<em>to be confirmed, may be incomplete</em>):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt<span class="w"> </span>upgrade
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gcc<span class="w"> </span>libboost-filesystem-dev<span class="w"> </span>libeigen3-dev<span class="w"> </span>meson<span class="w"> </span>ninja-build<span class="w"> </span>cmake
+</pre></div>
+</div>
+</section>
+</section>
+<section id="compile">
+<h3>Compile<a class="headerlink" href="#compile" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>First, clone the <code class="docutils literal notranslate"><span class="pre">corticalsim3D</span></code> repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/NLeSC/corticalsim3D
+</pre></div>
+</div>
+<p>NOTE: It is recommended that you do <strong><em>not</em></strong> enter the <code class="docutils literal notranslate"><span class="pre">corticalsim3D</span></code> directory. The next steps assume an out-of-source build setup, meaning that the directory (where the package will be compiled) will be outside the source tree. This has several advantages, such as precluding the possibility of accidentally committing build artefacts to the repository.</p>
+</li>
+<li><p>Configure the build with <code class="docutils literal notranslate"><span class="pre">meson</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>meson<span class="w"> </span>setup<span class="w"> </span>build<span class="w"> </span>corticalsim3D
+</pre></div>
+</div>
+<p>This command uses the Meson build system to bootstrap everything that we need for the compilation into a directory called <code class="docutils literal notranslate"><span class="pre">build</span></code> from the sources located in the <code class="docutils literal notranslate"><span class="pre">corticalsim3D</span></code> directory.</p>
+</li>
+<li><p>Enter the build directory and compile the source:</p>
+<p>NOTE: The possible options for the <code class="docutils literal notranslate"><span class="pre">--buildtype</span></code> switch are <code class="docutils literal notranslate"><span class="pre">plain</span></code>, <code class="docutils literal notranslate"><span class="pre">debug</span></code>, <code class="docutils literal notranslate"><span class="pre">debugoptimized</span></code> and <code class="docutils literal notranslate"><span class="pre">release</span></code>. Please check the <a class="reference external" href="https://mesonbuild.com/Running-Meson.html#configuring-the-build-directory">Meson documentation page</a> on configuring the build directory for information about the meaning of these options. We default to <code class="docutils literal notranslate"><span class="pre">release</span></code> here.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>meson<span class="w"> </span>compile<span class="w"> </span>-C<span class="w"> </span>build<span class="w"> </span>--buildtype<span class="w"> </span>release
+</pre></div>
+</div>
+<p>This will generate an executable file called <code class="docutils literal notranslate"><span class="pre">corticalsim3d</span></code> in the current directory (<code class="docutils literal notranslate"><span class="pre">build</span></code>).</p>
+<p>NOTE: If you are using a very old Meson version (e.g., <code class="docutils literal notranslate"><span class="pre">&lt;0.54.0</span></code>), you need to use <code class="docutils literal notranslate"><span class="pre">ninja</span></code> instead of <code class="docutils literal notranslate"><span class="pre">meson</span></code>, with a slightly different syntax:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ninja<span class="w"> </span>-C<span class="w"> </span>build<span class="w"> </span>corticalsim3d
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">corticalsim3d</span></code> is lowercase as it refers to the target to be built, not the <code class="docutils literal notranslate"><span class="pre">corticalsim3D</span></code> directory.</p>
+</li>
+</ol>
+</section>
+<section id="run">
+<h3>Run<a class="headerlink" href="#run" title="Link to this heading"></a></h3>
+<p>Run the <code class="docutils literal notranslate"><span class="pre">corticalsim3d</span></code> executable with the <code class="docutils literal notranslate"><span class="pre">corticalsim3D/config/parameters_ARRAY.txt</span></code> parameter file as the first argument:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./build/corticalsim3d<span class="w"> </span>./corticalsim3D/config/parameters_ARRAY.txt
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="development.html" class="btn btn-neutral float-right" title="Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017-2026.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

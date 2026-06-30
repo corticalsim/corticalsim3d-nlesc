@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classelementList" kind="class" language="C++" prot="public">
+    <compoundname>elementList</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classelementList_1ab5292822eea54dd4007a8a6148c5058a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int elementList::midPoint</definition>
+        <argsstring></argsstring>
+        <name>midPoint</name>
+        <qualifiedname>elementList::midPoint</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="653" column="9" bodyfile="include/corticalSimReal.h" bodystart="653" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classelementList_1a8f6a845f5684c4f5c6f94cda143136eb" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double elementList::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <qualifiedname>elementList::length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="654" column="12" bodyfile="include/corticalSimReal.h" bodystart="654" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classelementList_1aacf4ea0dfa307addf45815bc83969d22" prot="public" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; elementList::nodes</definition>
+        <argsstring></argsstring>
+        <name>nodes</name>
+        <qualifiedname>elementList::nodes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="655" column="12" bodyfile="include/corticalSimReal.h" bodystart="655" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classelementList_1a2576d5fdd9a600cc4824c95179e2f56e" prot="public" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; elementList::sharedElement</definition>
+        <argsstring></argsstring>
+        <name>sharedElement</name>
+        <qualifiedname>elementList::sharedElement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="656" column="12" bodyfile="include/corticalSimReal.h" bodystart="656" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classelementList_1a51e31ba2fa3555e6b70d50792ca475c5" prot="public" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; elementList::sharedEdge</definition>
+        <argsstring></argsstring>
+        <name>sharedEdge</name>
+        <qualifiedname>elementList::sharedEdge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="657" column="12" bodyfile="include/corticalSimReal.h" bodystart="657" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classelementList_1a238735a47aabebbbd0e871626c4077b9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double elementList::edge3DAngle</definition>
+        <argsstring></argsstring>
+        <name>edge3DAngle</name>
+        <qualifiedname>elementList::edge3DAngle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="658" column="12" bodyfile="include/corticalSimReal.h" bodystart="658" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classelementList_1aebb0cb678ed8d782860bfebf37dbf9a7" prot="public" static="no" mutable="no">
+        <type>Vector3d</type>
+        <definition>Vector3d elementList::intersectionByPlane</definition>
+        <argsstring></argsstring>
+        <name>intersectionByPlane</name>
+        <qualifiedname>elementList::intersectionByPlane</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="659" column="14" bodyfile="include/corticalSimReal.h" bodystart="659" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classelementList_1a5cc7c52c0196b81525eee8f6ae51bced" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>elementList::elementList</definition>
+        <argsstring>()</argsstring>
+        <name>elementList</name>
+        <qualifiedname>elementList::elementList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/corticalSimReal.h" line="661" column="5" bodyfile="include/corticalSimReal.h" bodystart="661" bodyend="674"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/corticalSimReal.h" line="649" column="1" bodyfile="include/corticalSimReal.h" bodystart="650" bodyend="675"/>
+    <listofallmembers>
+      <member refid="classelementList_1a238735a47aabebbbd0e871626c4077b9" prot="public" virt="non-virtual"><scope>elementList</scope><name>edge3DAngle</name></member>
+      <member refid="classelementList_1a5cc7c52c0196b81525eee8f6ae51bced" prot="public" virt="non-virtual"><scope>elementList</scope><name>elementList</name></member>
+      <member refid="classelementList_1aebb0cb678ed8d782860bfebf37dbf9a7" prot="public" virt="non-virtual"><scope>elementList</scope><name>intersectionByPlane</name></member>
+      <member refid="classelementList_1a8f6a845f5684c4f5c6f94cda143136eb" prot="public" virt="non-virtual"><scope>elementList</scope><name>length</name></member>
+      <member refid="classelementList_1ab5292822eea54dd4007a8a6148c5058a" prot="public" virt="non-virtual"><scope>elementList</scope><name>midPoint</name></member>
+      <member refid="classelementList_1aacf4ea0dfa307addf45815bc83969d22" prot="public" virt="non-virtual"><scope>elementList</scope><name>nodes</name></member>
+      <member refid="classelementList_1a51e31ba2fa3555e6b70d50792ca475c5" prot="public" virt="non-virtual"><scope>elementList</scope><name>sharedEdge</name></member>
+      <member refid="classelementList_1a2576d5fdd9a600cc4824c95179e2f56e" prot="public" virt="non-virtual"><scope>elementList</scope><name>sharedElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
