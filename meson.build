@@ -1,8 +1,5 @@
 project('corticalsim', 'cpp')
 
-# Compiler flags
-# add_global_arguments('-O2', language : 'cpp')
-
 # Directories containing header files
 incdir = include_directories('include')
 
